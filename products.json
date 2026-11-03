@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "nama": "Pastel Matte Tumbler 500ml",
+    "harga": 79000,
+    "kategori": "Tumbler",
+    "deskripsi": "Tumbler stainless steel SUS 304 anti karat dengan finishing matte warna soft pink elegan. Tahan suhu dingin & panas hingga 8 jam.",
+    "gambar": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80",
+    "stok": "Tersedia"
+  },
+  {
+    "id": 2,
+    "nama": "Sweet Peach Thermos Flask 450ml",
+    "harga": 89000,
+    "kategori": "Thermos",
+    "deskripsi": "Thermos modern dengan teknologi isolasi vakum ganda, penutup anti bocor 360°, dan gantungan silikon pastel yang manis.",
+    "gambar": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80",
+    "stok": "Tersedia"
+  },
+  {
+    "id": 3,
+    "nama": "Aesthetic Glass Tumbler with Straw 400ml",
+    "harga": 65000,
+    "kategori": "Glassware",
+    "deskripsi": "Gelas borosilikat transparan tebal tahan panas & dingin, lengkap dengan sedotan kaca higienis dan sleeve pelindung pink.",
+    "gambar": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+    "stok": "Tersedia"
+  },
+  {
+    "id": 4,
+    "nama": "Blossom Gradient Sport Bottle 1000ml",
+    "harga": 75000,
+    "kategori": "Sport Bottle",
+    "deskripsi": "Botol minum motivasi 1 Liter dengan penanda waktu, sedotan pop-up otomatis, dan gradasi warna pink-peach yang menyegarkan.",
+    "gambar": "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80",
+    "stok": "Tersedia"
+  },
+  {
+    "id": 5,
+    "nama": "Mini Pocket Vacuum Cup 280ml",
+    "harga": 69000,
+    "kategori": "Thermos",
+    "deskripsi": "Thermos saku berukuran praktis yang pas dimasukkan ke dalam tas tangan. Ideal untuk menjaga kopi atau teh hangat kesayangan.",
+    "gambar": "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80",
+    "stok": "Tersedia"
+  },
+  {
+    "id": 6,
+    "nama": "Ceramic Insulated Coffee Mug 380ml",
+    "harga": 95000,
+    "kategori": "Coffee Mug",
+    "deskripsi": "Mug termal berpelapis keramik murni di bagian dalam sehingga rasa kopi tetap autentik tanpa aroma logam. Tutup anti tumpah.",
+    "gambar": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80",
+    "stok": "Tersedia"
+  },
+  {
+    "id": 7,
+    "nama": "Rose Gold Smart Thermos LED 500ml",
+    "harga": 99000,
+    "kategori": "Thermos",
+    "deskripsi": "Thermos pintar dengan sensor layar sentuh LED pada tutup untuk memantau suhu minuman secara real-time. Mewah dan canggih.",
+    "gambar": "https://images.unsplash.com/photo-1534073828943-f801091bb18c?auto=format&fit=crop&w=600&q=80",
+    "stok": "Tersedia"
+  },
+  {
+    "id": 8,
+    "nama": "Pastel Bear Kids Sippy Bottle 550ml",
+    "harga": 82000,
+    "kategori": "Kids Bottle",
+    "deskripsi": "Botol minum anak bermotif beruang imut dengan sedotan silikon lembut, tali selempang panjang, dan material 100% BPA Free aman.",
+    "gambar": "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?auto=format&fit=crop&w=600&q=80",
+    "stok": "Tersedia"
+  },
+  {
+    "id": 9,
+    "nama": "Crystal Infuser Water Bottle 600ml",
+    "harga": 72000,
+    "kategori": "Infuser",
+    "deskripsi": "Botol infused water dengan saringan buah berbahan food-grade. Bantu penuhi hidrasi harian dengan racikan buah favorit.",
+    "gambar": "https://images.unsplash.com/photo-1559839914-1b346d71b3e8?auto=format&fit=crop&w=600&q=80",
+    "stok": "Tersedia"
+  },
+  {
+    "id": 10,
+    "nama": "Double-Wall Glitter Tumbler 650ml",
+    "harga": 85000,
+    "kategori": "Tumbler",
+    "deskripsi": "Tumbler dinding ganda berisi glitter cair gemerlap warna pink pastel. Dilengkapi sedotan reusable dan anti keringat di dinding luar.",
+    "gambar": "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?auto=format&fit=crop&w=600&q=80",
+    "stok": "Tersedia"
+  }
+]
+
