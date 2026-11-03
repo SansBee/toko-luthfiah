@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luthfiah - Aesthetic Modern Drinkware & Thermos</title>
-  
+
   <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    rel="stylesheet">
+
   <!-- Tailwind CSS Play CDN (v4) -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style type="text/tailwindcss">
@@ -32,7 +35,8 @@
 
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 6px;
+      height: 6px;
     }
     ::-webkit-scrollbar-track {
       background: #FFF0F5;
@@ -45,39 +49,53 @@
       background: #FF1493;
     }
 
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
     /* Soft Gradient Animations */
     .hero-glow {
-      background: radial-gradient(circle at 50% 50%, rgba(255, 182, 193, 0.45) 0%, rgba(255, 240, 245, 0) 70%);
+      background: radial-gradient(circle at 50% 50%, rgba(255, 182, 193, 0.4) 0%, rgba(255, 240, 245, 0) 70%);
     }
   </style>
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-brand-bg text-brand-dark font-sans min-h-screen flex flex-col antialiased selection:bg-brand-medium selection:text-white">
+
+<body
+  class="bg-brand-bg text-brand-dark font-sans min-h-screen flex flex-col antialiased selection:bg-brand-medium selection:text-white pb-16 sm:pb-0">
 
   <!-- ================= NAVBAR ================= -->
-  <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b border-pink-100 transition-all duration-300">
+  <header
+    class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-pink-100/80 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
+      <div class="flex items-center justify-between h-16 sm:h-20">
+
         <!-- Logo & Branding -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-accent via-brand-medium to-brand-light flex items-center justify-center text-white shadow-soft group-hover:scale-105 transition-transform duration-300">
-            <i data-lucide="sparkles" class="w-6 h-6 animate-pulse"></i>
+        <a href="#" class="flex items-center gap-2.5 sm:gap-3 group">
+          <div
+            class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-brand-accent via-brand-medium to-brand-light flex items-center justify-center text-white shadow-soft group-hover:scale-105 transition-transform duration-300">
+            <i data-lucide="sparkles" class="w-5 h-5 sm:w-6 sm:h-6"></i>
           </div>
           <div>
-            <span class="font-serif text-2xl font-bold tracking-tight text-brand-accent block leading-tight">
+            <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-brand-accent block leading-tight">
               Luthfiah
             </span>
-            <span class="text-[11px] font-semibold tracking-widest text-brand-muted uppercase block">
+            <span class="text-[9px] sm:text-[11px] font-semibold tracking-widest text-brand-muted uppercase block">
               Modern Drinkware
             </span>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-muted">
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-brand-muted">
           <a href="#beranda" class="hover:text-brand-accent transition-colors duration-200">Beranda</a>
           <a href="#keunggulan" class="hover:text-brand-accent transition-colors duration-200">Keunggulan</a>
           <a href="#katalog" class="hover:text-brand-accent transition-colors duration-200">Katalog Produk</a>
@@ -85,12 +103,14 @@
         </nav>
 
         <!-- Right Action: Cart Button -->
-        <div class="flex items-center gap-3">
-          <button id="open-cart-btn" aria-label="Buka Keranjang Belanja" class="relative flex items-center gap-2 px-4 py-2.5 rounded-full bg-brand-light text-brand-accent hover:bg-brand-medium hover:text-white transition-all duration-300 shadow-sm font-medium text-sm group">
-            <i data-lucide="shopping-bag" class="w-5 h-5 group-hover:rotate-6 transition-transform"></i>
-            <span class="hidden sm:inline font-semibold">Keranjang</span>
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button id="open-cart-btn" aria-label="Buka Keranjang Belanja"
+            class="relative flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full bg-brand-light text-brand-accent hover:bg-brand-medium hover:text-white transition-all duration-300 shadow-sm font-semibold text-xs sm:text-sm group">
+            <i data-lucide="shopping-bag" class="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-6 transition-transform"></i>
+            <span class="hidden sm:inline">Keranjang</span>
             <!-- Badge Counter -->
-            <span id="cart-badge" class="min-w-[22px] h-[22px] px-1.5 flex items-center justify-center bg-brand-accent text-white text-xs font-bold rounded-full shadow-md group-hover:bg-white group-hover:text-brand-accent transition-colors">
+            <span id="cart-badge"
+              class="min-w-[20px] h-[20px] sm:min-w-[22px] sm:h-[22px] px-1 flex items-center justify-center bg-brand-accent text-white text-[11px] sm:text-xs font-bold rounded-full shadow-md group-hover:bg-white group-hover:text-brand-accent transition-colors">
               0
             </span>
           </button>
@@ -101,71 +121,83 @@
   </header>
 
   <!-- ================= HERO SECTION ================= -->
-  <section id="beranda" class="relative overflow-hidden pt-8 pb-16 lg:py-24 bg-gradient-to-b from-brand-light/70 via-white to-brand-bg">
+  <section id="beranda"
+    class="relative overflow-hidden pt-6 pb-12 sm:pt-12 sm:pb-20 lg:py-24 bg-gradient-to-b from-brand-light/60 via-white to-brand-bg">
     <!-- Background Decor Elements -->
-    <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full hero-glow pointer-events-none"></div>
-    <div class="absolute top-1/2 -left-20 w-80 h-80 rounded-full hero-glow pointer-events-none"></div>
-    
+    <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full hero-glow pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-20 w-72 h-72 rounded-full hero-glow pointer-events-none"></div>
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
         <!-- Left Content -->
         <div class="lg:col-span-7 text-center lg:text-left">
-          
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-brand-medium/50 text-brand-accent text-xs sm:text-sm font-semibold shadow-sm mb-6 animate-bounce">
-            <i data-lucide="heart" class="w-4 h-4 fill-brand-accent"></i>
-            <span>Koleksi Botol Minum & Thermos Estetik Pastel</span>
+
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-brand-medium/50 text-brand-accent text-[11px] sm:text-xs font-semibold shadow-sm mb-4 sm:mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-accent animate-ping"></span>
+            <span>Koleksi Botol Minum & Thermos Pastel Estetik</span>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-dark leading-[1.15] mb-6">
-            Bawa Kesegaran & Gaya Cantik <span class="text-brand-accent italic underline decoration-brand-medium/50 decoration-wavy">Setiap Hari</span>.
+          <h1
+            class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-dark leading-tight sm:leading-[1.18] mb-4 sm:mb-6">
+            Bawa Kesegaran & Gaya Cantik <span
+              class="text-brand-accent italic underline decoration-brand-medium/50 decoration-wavy">Setiap Hari</span>.
           </h1>
 
-          <p class="text-base sm:text-lg text-brand-muted max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-            Temukan 10 kurasi produk <em>drinkware</em> modern Toko <strong>Luthfiah</strong>. Terbuat dari material food-grade premium, tahan suhu berjam-jam dengan sentuhan warna soft pink yang memikat hati.
+          <p class="text-xs sm:text-base text-brand-muted max-w-xl mx-auto lg:mx-0 mb-6 sm:mb-8 leading-relaxed">
+            Temukan 10 kurasi produk <em>drinkware</em> modern Toko <strong>Luthfiah</strong>. Terbuat dari material
+            food-grade premium SUS 304, tahan suhu berjam-jam dengan sentuhan warna soft pink yang manis dan elegan.
           </p>
 
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <a href="#katalog" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-brand-accent text-white font-semibold text-base shadow-soft hover:bg-brand-hover hover:scale-[1.02] active:scale-95 transition-all duration-300">
-              <i data-lucide="sparkles" class="w-5 h-5"></i>
-              <span>Lihat Koleksi Produk</span>
+          <div class="flex flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-4">
+            <a href="#katalog"
+              class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 sm:px-8 py-3 sm:py-3.5 rounded-full bg-brand-accent text-white font-semibold text-xs sm:text-sm shadow-soft hover:bg-brand-hover hover:scale-[1.02] active:scale-95 transition-all duration-200">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span>Lihat Koleksi</span>
             </a>
-            
-            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Luthfiah,%20saya%20ingin%20tanya-tanya%20seputar%20produk" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-white text-brand-dark border border-brand-medium/60 font-semibold text-base hover:bg-brand-light/50 transition-all duration-300">
-              <i data-lucide="message-circle" class="w-5 h-5 text-emerald-500"></i>
+
+            <a href="https://wa.me/6282252590151?text=Halo%20Admin%20Luthfiah,%20saya%20ingin%20tanya%20seputar%20produk"
+              target="_blank" rel="noopener noreferrer"
+              class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-4 sm:px-6 py-3 sm:py-3.5 rounded-full bg-white text-brand-dark border border-brand-medium/60 font-semibold text-xs sm:text-sm hover:bg-brand-light/50 transition-all duration-200 shadow-sm">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
               <span>Tanya Admin WA</span>
             </a>
           </div>
 
           <!-- Mini Badges -->
-          <div class="grid grid-cols-3 gap-4 pt-10 border-t border-pink-200/60 mt-10 max-w-lg mx-auto lg:mx-0 text-left">
-            <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-xl bg-brand-light flex items-center justify-center text-brand-accent shrink-0">
-                <i data-lucide="shield-check" class="w-5 h-5"></i>
+          <div
+            class="grid grid-cols-3 gap-2 sm:gap-4 pt-6 sm:pt-8 border-t border-pink-200/60 mt-6 sm:mt-10 max-w-lg mx-auto lg:mx-0 text-left">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-brand-light flex items-center justify-center text-brand-accent shrink-0">
+                <i data-lucide="shield-check" class="w-4 h-4 sm:w-5 sm:h-5"></i>
               </div>
               <div>
-                <p class="text-xs font-bold text-brand-dark">BPA Free</p>
-                <p class="text-[11px] text-brand-muted">100% Food Grade</p>
+                <p class="text-[11px] sm:text-xs font-bold text-brand-dark">BPA Free</p>
+                <p class="text-[9px] sm:text-[10px] text-brand-muted">100% Food Grade</p>
               </div>
             </div>
 
-            <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-xl bg-brand-light flex items-center justify-center text-brand-accent shrink-0">
-                <i data-lucide="flame" class="w-5 h-5"></i>
+            <div class="flex items-center gap-2">
+              <div
+                class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-brand-light flex items-center justify-center text-brand-accent shrink-0">
+                <i data-lucide="flame" class="w-4 h-4 sm:w-5 sm:h-5"></i>
               </div>
               <div>
-                <p class="text-xs font-bold text-brand-dark">Tahan 8-12 Jam</p>
-                <p class="text-[11px] text-brand-muted">Panas & Dingin</p>
+                <p class="text-[11px] sm:text-xs font-bold text-brand-dark">Tahan 8-12 Jam</p>
+                <p class="text-[9px] sm:text-[10px] text-brand-muted">Panas & Dingin</p>
               </div>
             </div>
 
-            <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-xl bg-brand-light flex items-center justify-center text-brand-accent shrink-0">
-                <i data-lucide="truck" class="w-5 h-5"></i>
+            <div class="flex items-center gap-2">
+              <div
+                class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-brand-light flex items-center justify-center text-brand-accent shrink-0">
+                <i data-lucide="truck" class="w-4 h-4 sm:w-5 sm:h-5"></i>
               </div>
               <div>
-                <p class="text-xs font-bold text-brand-dark">Pengiriman Aman</p>
-                <p class="text-[11px] text-brand-muted">Bubble Wrap Tebal</p>
+                <p class="text-[11px] sm:text-xs font-bold text-brand-dark">Kirim Aman</p>
+                <p class="text-[9px] sm:text-[10px] text-brand-muted">Bubble Wrap Tebal</p>
               </div>
             </div>
           </div>
@@ -173,45 +205,49 @@
         </div>
 
         <!-- Right Featured Visual -->
-        <div class="lg:col-span-5 relative flex justify-center">
-          <div class="relative w-full max-w-sm sm:max-w-md">
+        <div class="lg:col-span-5 relative flex justify-center mt-2 lg:mt-0">
+          <div class="relative w-full max-w-xs sm:max-w-sm">
             <!-- Glow background circle -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-brand-medium via-brand-light to-white rounded-3xl transform rotate-3 scale-105 opacity-80 filter blur-xl"></div>
-            
+            <div
+              class="absolute inset-0 bg-gradient-to-tr from-brand-medium via-brand-light to-white rounded-3xl transform rotate-2 scale-105 opacity-80 filter blur-xl">
+            </div>
+
             <!-- Main Hero Card -->
-            <div class="relative bg-white p-4 sm:p-5 rounded-3xl shadow-soft border border-pink-100 overflow-hidden">
-              <div class="relative h-80 sm:h-96 rounded-2xl overflow-hidden bg-brand-light">
-                <img 
-                  src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80" 
-                  alt="Pastel Matte Tumbler Luthfiah" 
+            <div
+              class="relative bg-white p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl shadow-soft border border-pink-100 overflow-hidden">
+              <div
+                class="relative aspect-square sm:aspect-[4/5] rounded-xl sm:rounded-2xl overflow-hidden bg-brand-light">
+                <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80"
+                  alt="Pastel Matte Tumbler Luthfiah"
                   class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                  onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'600\' viewBox=\'0 0 600 600\'%3E%3Crect width=\'600\' height=\'600\' fill=\'%23FFF0F5\'/%3E%3Ccircle cx=\'300\' cy=\'260\' r=\'100\' fill=\'%23FFB6C1\' opacity=\'0.7\'/%3E%3Ctext x=\'300\' y=\'410\' font-family=\'sans-serif\' font-size=\'26\' font-weight=\'bold\' fill=\'%23FF1493\' text-anchor=\'middle\'%3ELuthfiah Drinkware%3C/text%3E%3C/svg%3E';"
-                />
-                <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-brand-accent shadow-sm">
-                  ⭐ Best Seller 2026
+                  onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'600\' viewBox=\'0 0 600 600\'%3E%3Crect width=\'600\' height=\'600\' fill=\'%23FFF0F5\'/%3E%3Ccircle cx=\'300\' cy=\'260\' r=\'100\' fill=\'%23FFB6C1\' opacity=\'0.7\'/%3E%3Ctext x=\'300\' y=\'410\' font-family=\'sans-serif\' font-size=\'26\' font-weight=\'bold\' fill=\'%23FF1493\' text-anchor=\'middle\'%3ELuthfiah Drinkware%3C/text%3E%3C/svg%3E';" />
+                <div
+                  class="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold text-brand-accent shadow-sm">
+                  ⭐ Koleksi Unggulan
                 </div>
               </div>
-              
-              <div class="pt-4 flex items-center justify-between">
+
+              <div class="pt-3 flex items-center justify-between">
                 <div>
-                  <h3 class="font-bold text-base text-brand-dark">Pastel Matte Tumbler 500ml</h3>
-                  <p class="text-xs text-brand-muted">Warna Soft Pink Elegan • Tahan Panas 8 Jam</p>
+                  <h3 class="font-bold text-xs sm:text-sm text-brand-dark">Sweet Peach Thermos 450ml</h3>
+                  <p class="text-[10px] sm:text-xs text-brand-muted">Food Grade SUS 304 • Tahan 8 Jam</p>
                 </div>
                 <div class="text-right">
-                  <span class="text-xs text-brand-muted line-through">Rp 99.000</span>
-                  <p class="text-lg font-bold text-brand-accent">Rp 79.000</p>
+                  <span class="text-[10px] text-brand-muted line-through">Rp 109.000</span>
+                  <p class="text-sm sm:text-base font-extrabold text-brand-accent">Rp 89.000</p>
                 </div>
               </div>
             </div>
 
-            <!-- Floating floating pill -->
-            <div class="absolute -bottom-5 -left-5 bg-white py-2.5 px-4 rounded-2xl shadow-lg border border-pink-100 flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+            <!-- Floating Pill -->
+            <div
+              class="absolute -bottom-3 -left-3 bg-white py-1.5 px-3 rounded-xl shadow-lg border border-pink-100 flex items-center gap-2">
+              <div
+                class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xs">
                 ✓
               </div>
               <div>
-                <p class="text-xs font-bold text-brand-dark">Stok Siap Kirim</p>
-                <p class="text-[10px] text-brand-muted">Garansi barang mulus</p>
+                <p class="text-[10px] sm:text-xs font-bold text-brand-dark">Stok Siap Kirim</p>
               </div>
             </div>
 
@@ -223,46 +259,61 @@
   </section>
 
   <!-- ================= KEUNGGULAN SECTION ================= -->
-  <section id="keunggulan" class="py-14 bg-white border-y border-pink-100">
+  <section id="keunggulan" class="py-10 sm:py-14 bg-white border-y border-pink-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-2">Kenapa Toko Luthfiah?</h2>
-        <p class="text-2xl sm:text-3xl font-serif font-bold text-brand-dark">Drinkware Cantik, Kualitas Tanpa Kompromi</p>
+
+      <div class="text-center max-w-xl mx-auto mb-8 sm:mb-10">
+        <h2 class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-accent mb-1.5">Kenapa Toko
+          Luthfiah?</h2>
+        <p class="text-xl sm:text-2xl font-serif font-bold text-brand-dark">Drinkware Cantik, Kualitas Tanpa Kompromi
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <div class="p-6 rounded-2xl bg-brand-bg/70 border border-pink-100 hover:border-brand-medium hover:shadow-card transition-all duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-brand-light flex items-center justify-center text-brand-accent mb-4">
-            <i data-lucide="palette" class="w-6 h-6"></i>
+      <!-- 2 Columns on Mobile, 4 Columns on Desktop -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+
+        <div
+          class="p-3.5 sm:p-5 rounded-2xl bg-brand-bg/70 border border-pink-100 hover:border-brand-medium hover:shadow-card transition-all duration-300">
+          <div
+            class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-brand-light flex items-center justify-center text-brand-accent mb-2.5 sm:mb-3">
+            <i data-lucide="palette" class="w-5 h-5 sm:w-6 sm:h-6"></i>
           </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Aesthetic Pastel Design</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">Dirancang dengan palet warna soft pink dan bentuk minimalis yang Instagramable.</p>
+          <h3 class="font-bold text-xs sm:text-sm text-brand-dark mb-1">Aesthetic Pastel</h3>
+          <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed">Palet soft pink minimalis yang estetik dan
+            Instagramable.</p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-brand-bg/70 border border-pink-100 hover:border-brand-medium hover:shadow-card transition-all duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-brand-light flex items-center justify-center text-brand-accent mb-4">
-            <i data-lucide="shield" class="w-6 h-6"></i>
+        <div
+          class="p-3.5 sm:p-5 rounded-2xl bg-brand-bg/70 border border-pink-100 hover:border-brand-medium hover:shadow-card transition-all duration-300">
+          <div
+            class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-brand-light flex items-center justify-center text-brand-accent mb-2.5 sm:mb-3">
+            <i data-lucide="shield" class="w-5 h-5 sm:w-6 sm:h-6"></i>
           </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">SUS 304 Food Grade</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">Bebas racun, BPA Free, tidak meninggalkan bau dan aman untuk semua minuman.</p>
+          <h3 class="font-bold text-xs sm:text-sm text-brand-dark mb-1">SUS 304 Food Grade</h3>
+          <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed">Bebas racun, BPA Free, tidak berbau,
+            higienis untuk minuman.</p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-brand-bg/70 border border-pink-100 hover:border-brand-medium hover:shadow-card transition-all duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-brand-light flex items-center justify-center text-brand-accent mb-4">
-            <i data-lucide="thermometer" class="w-6 h-6"></i>
+        <div
+          class="p-3.5 sm:p-5 rounded-2xl bg-brand-bg/70 border border-pink-100 hover:border-brand-medium hover:shadow-card transition-all duration-300">
+          <div
+            class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-brand-light flex items-center justify-center text-brand-accent mb-2.5 sm:mb-3">
+            <i data-lucide="thermometer" class="w-5 h-5 sm:w-6 sm:h-6"></i>
           </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Double-Wall Vacuum</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">Menjaga es batu tetap dingin atau kopi tetap panas sepanjang hari kerja.</p>
+          <h3 class="font-bold text-xs sm:text-sm text-brand-dark mb-1">Double-Wall Vacuum</h3>
+          <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed">Isolasi vakum ganda menjaga suhu dingin
+            atau hangat seharian.</p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-brand-bg/70 border border-pink-100 hover:border-brand-medium hover:shadow-card transition-all duration-300">
-          <div class="w-12 h-12 rounded-2xl bg-brand-light flex items-center justify-center text-brand-accent mb-4">
-            <i data-lucide="send" class="w-6 h-6"></i>
+        <div
+          class="p-3.5 sm:p-5 rounded-2xl bg-brand-bg/70 border border-pink-100 hover:border-brand-medium hover:shadow-card transition-all duration-300">
+          <div
+            class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-brand-light flex items-center justify-center text-brand-accent mb-2.5 sm:mb-3">
+            <i data-lucide="send" class="w-5 h-5 sm:w-6 sm:h-6"></i>
           </div>
-          <h3 class="font-bold text-base text-brand-dark mb-1">Pesan Cepat via WhatsApp</h3>
-          <p class="text-xs text-brand-muted leading-relaxed">Pemesanan instan terhubung langsung ke WhatsApp admin tanpa ribet registrasi akun.</p>
+          <h3 class="font-bold text-xs sm:text-sm text-brand-dark mb-1">Checkout WhatsApp</h3>
+          <p class="text-[11px] sm:text-xs text-brand-muted leading-relaxed">Pesan langsung ke WhatsApp admin tanpa
+            ribet registrasi akun.</p>
         </div>
 
       </div>
@@ -271,67 +322,72 @@
   </section>
 
   <!-- ================= KATALOG PRODUK SECTION ================= -->
-  <section id="katalog" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow">
-    
+  <section id="katalog" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow">
+
     <!-- Section Title -->
-    <div class="text-center max-w-2xl mx-auto mb-10">
-      <span class="inline-block px-3.5 py-1 rounded-full bg-brand-light text-brand-accent font-semibold text-xs mb-3">
+    <div class="text-center max-w-xl mx-auto mb-6 sm:mb-8">
+      <span
+        class="inline-block px-3 py-1 rounded-full bg-brand-light text-brand-accent font-semibold text-[11px] sm:text-xs mb-2">
         Katalog Eksklusif
       </span>
-      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-dark mb-3">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-brand-dark mb-2">
         Koleksi Drinkware Pilihan
       </h2>
-      <p class="text-sm text-brand-muted">
-        Pilih botol minum dan thermos favoritmu. Klik <span class="text-brand-accent font-semibold">+ Keranjang</span> untuk mengumpulkan pesanan.
+      <p class="text-xs sm:text-sm text-brand-muted">
+        Pilih botol minum dan thermos favoritmu. Klik <span class="text-brand-accent font-semibold">+ Keranjang</span>
+        untuk memesan.
       </p>
     </div>
 
     <!-- Search & Filter Controls -->
-    <div class="mb-10 bg-white p-5 rounded-3xl shadow-sm border border-pink-100">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        
+    <div class="mb-6 sm:mb-8 bg-white p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl shadow-sm border border-pink-100">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
+
         <!-- Live Search Input -->
-        <div class="relative w-full md:w-96">
-          <i data-lucide="search" class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-brand-muted"></i>
-          <input 
-            type="text" 
-            id="search-input" 
-            placeholder="Cari botol minum, thermos, tumbler..." 
-            class="w-full pl-12 pr-10 py-3 rounded-2xl bg-brand-bg/60 border border-pink-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:border-brand-accent transition-all placeholder:text-brand-muted/70"
-          >
-          <button 
-            id="clear-search-btn" 
-            class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-brand-muted hover:text-brand-accent p-1"
-            title="Bersihkan pencarian"
-          >
-            <i data-lucide="x" class="w-4 h-4"></i>
+        <div class="relative w-full md:w-80">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-brand-muted"></i>
+          <input type="text" id="search-input" placeholder="Cari botol minum, tumbler..."
+            class="w-full pl-10 pr-9 py-2.5 rounded-xl sm:rounded-2xl bg-brand-bg/60 border border-pink-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:border-brand-accent transition-all placeholder:text-brand-muted/70">
+          <button id="clear-search-btn"
+            class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-brand-muted hover:text-brand-accent p-1"
+            title="Bersihkan pencarian">
+            <i data-lucide="x" class="w-3.5 h-3.5"></i>
           </button>
         </div>
 
-        <!-- Category Pills -->
-        <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none" id="category-filters">
-          <button data-category="Semua" class="category-btn active px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-accent text-white shadow-sm">
+        <!-- Category Pills (Horizontal Scroll on Mobile) -->
+        <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto w-full md:w-auto pb-1 sm:pb-0 no-scrollbar"
+          id="category-filters">
+          <button data-category="Semua"
+            class="category-btn active px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-accent text-white shadow-sm">
             Semua (10)
           </button>
-          <button data-category="Tumbler" class="category-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
+          <button data-category="Tumbler"
+            class="category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
             Tumbler
           </button>
-          <button data-category="Thermos" class="category-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
+          <button data-category="Thermos"
+            class="category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
             Thermos
           </button>
-          <button data-category="Glassware" class="category-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
+          <button data-category="Glassware"
+            class="category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
             Glassware
           </button>
-          <button data-category="Sport Bottle" class="category-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
+          <button data-category="Sport Bottle"
+            class="category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
             Sport Bottle
           </button>
-          <button data-category="Coffee Mug" class="category-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
+          <button data-category="Coffee Mug"
+            class="category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
             Coffee Mug
           </button>
-          <button data-category="Kids Bottle" class="category-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
+          <button data-category="Kids Bottle"
+            class="category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
             Kids Bottle
           </button>
-          <button data-category="Infuser" class="category-btn px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
+          <button data-category="Infuser"
+            class="category-btn px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold whitespace-nowrap transition-all duration-200 bg-brand-bg text-brand-muted hover:bg-brand-light hover:text-brand-accent border border-pink-100">
             Infuser
           </button>
         </div>
@@ -339,31 +395,34 @@
       </div>
 
       <!-- Result Counter -->
-      <div class="mt-4 pt-3 border-t border-pink-100 flex items-center justify-between text-xs text-brand-muted">
+      <div
+        class="mt-3 pt-2.5 border-t border-pink-100 flex items-center justify-between text-[11px] sm:text-xs text-brand-muted">
         <div>
           Menampilkan <span id="product-count" class="font-bold text-brand-accent">10</span> produk
         </div>
         <div id="filter-status" class="hidden">
-          Hasil pencarian untuk: "<span id="filter-query" class="font-bold text-brand-dark"></span>"
+          Hasil pencarian: "<span id="filter-query" class="font-bold text-brand-dark"></span>"
         </div>
       </div>
     </div>
 
-    <!-- Products Grid (1 col on mobile, 2 on small tablet, 3 on md, 4 on desktop) -->
-    <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-7">
+    <!-- Products Grid (2 columns on mobile, 3 on md, 4 on desktop) -->
+    <div id="products-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
       <!-- Product Cards dynamically rendered here via app.js -->
     </div>
 
     <!-- Empty State for Search -->
-    <div id="empty-state" class="hidden py-16 text-center">
-      <div class="w-20 h-20 mx-auto rounded-full bg-brand-light flex items-center justify-center text-brand-accent mb-4">
-        <i data-lucide="package-search" class="w-10 h-10"></i>
+    <div id="empty-state" class="hidden py-14 text-center">
+      <div
+        class="w-16 h-16 mx-auto rounded-full bg-brand-light flex items-center justify-center text-brand-accent mb-3">
+        <i data-lucide="package-search" class="w-8 h-8"></i>
       </div>
-      <h3 class="text-lg font-bold text-brand-dark mb-1">Produk Tidak Ditemukan</h3>
-      <p class="text-sm text-brand-muted max-w-md mx-auto mb-6">
-        Maaf, tidak ada produk botol minum yang sesuai dengan kata kunci Anda. Silakan coba kata kunci lain.
+      <h3 class="text-base font-bold text-brand-dark mb-1">Produk Tidak Ditemukan</h3>
+      <p class="text-xs text-brand-muted max-w-xs mx-auto mb-4">
+        Maaf, tidak ada produk yang cocok dengan pencarian Anda.
       </p>
-      <button id="reset-filter-btn" class="px-5 py-2.5 rounded-full bg-brand-accent text-white text-xs font-semibold hover:bg-brand-hover transition-colors shadow-sm">
+      <button id="reset-filter-btn"
+        class="px-4 py-2 rounded-full bg-brand-accent text-white text-xs font-semibold hover:bg-brand-hover transition-colors shadow-sm">
         Tampilkan Semua Produk
       </button>
     </div>
@@ -371,32 +430,40 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer id="kontak" class="bg-white border-t border-pink-100 pt-14 pb-8">
+  <footer id="kontak" class="bg-white border-t border-pink-100 pt-10 sm:pt-14 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-pink-100">
-        
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-pink-100">
+
         <!-- Brand Info -->
         <div class="md:col-span-5">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-brand-accent via-brand-medium to-brand-light flex items-center justify-center text-white shadow-soft">
+          <div class="flex items-center gap-2.5 mb-3">
+            <div
+              class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-accent via-brand-medium to-brand-light flex items-center justify-center text-white shadow-soft">
               <i data-lucide="sparkles" class="w-5 h-5"></i>
             </div>
             <div>
-              <span class="font-serif text-2xl font-bold tracking-tight text-brand-accent">Luthfiah</span>
-              <span class="text-[10px] tracking-widest text-brand-muted uppercase block">Drinkware Boutique</span>
+              <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-brand-accent">Luthfiah</span>
+              <span class="text-[9px] tracking-widest text-brand-muted uppercase block">Drinkware Boutique</span>
             </div>
           </div>
-          <p class="text-sm text-brand-muted leading-relaxed max-w-sm mb-5">
-            Pusat botol minum, thermos stainless, dan drinkware modern bertema soft pastel aesthetic. Manis, fungsional, dan menjaga gaya hidup sehatmu.
+          <p class="text-xs sm:text-sm text-brand-muted leading-relaxed max-w-sm mb-4">
+            Pusat botol minum, termos stainless, dan drinkware modern bertema soft pastel aesthetic. Manis, fungsional,
+            dan menjaga gaya hidup sehatmu.
           </p>
-          <div class="flex items-center gap-3 text-brand-accent">
-            <a href="#" class="w-9 h-9 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors" title="Instagram">
+          <div class="flex items-center gap-2.5 text-brand-accent">
+            <a href="#"
+              class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors"
+              title="Instagram">
               <i data-lucide="instagram" class="w-4 h-4"></i>
             </a>
-            <a href="https://wa.me/6281234567890" target="_blank" class="w-9 h-9 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors" title="WhatsApp">
+            <a href="https://wa.me/6282252590151" target="_blank"
+              class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors"
+              title="WhatsApp">
               <i data-lucide="message-circle" class="w-4 h-4"></i>
             </a>
-            <a href="#" class="w-9 h-9 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors" title="TikTok">
+            <a href="#"
+              class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors"
+              title="TikTok">
               <i data-lucide="video" class="w-4 h-4"></i>
             </a>
           </div>
@@ -404,8 +471,8 @@
 
         <!-- Quick Links -->
         <div class="md:col-span-3">
-          <h4 class="font-bold text-sm uppercase tracking-wider text-brand-dark mb-4">Menu Belanja</h4>
-          <ul class="space-y-2.5 text-sm text-brand-muted">
+          <h4 class="font-bold text-xs uppercase tracking-wider text-brand-dark mb-3">Menu Belanja</h4>
+          <ul class="space-y-2 text-xs text-brand-muted">
             <li><a href="#katalog" class="hover:text-brand-accent transition-colors">Semua Produk</a></li>
             <li><a href="#katalog" class="hover:text-brand-accent transition-colors">Thermos Vacuum Flask</a></li>
             <li><a href="#katalog" class="hover:text-brand-accent transition-colors">Aesthetic Tumbler</a></li>
@@ -415,143 +482,144 @@
 
         <!-- Customer Service & WhatsApp Info -->
         <div class="md:col-span-4">
-          <h4 class="font-bold text-sm uppercase tracking-wider text-brand-dark mb-4">Layanan Pelanggan</h4>
-          <p class="text-sm text-brand-muted mb-3">Ada pertanyaan seputar spesifikasi produk atau pemesanan jumlah besar?</p>
-          
-          <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Luthfiah" target="_blank" class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-sm font-semibold hover:bg-emerald-100 transition-colors">
-            <i data-lucide="message-circle" class="w-5 h-5 text-emerald-600"></i>
+          <h4 class="font-bold text-xs uppercase tracking-wider text-brand-dark mb-3">Layanan Pelanggan</h4>
+          <p class="text-xs text-brand-muted mb-2.5">Ada pertanyaan seputar spesifikasi atau pemesanan?</p>
+
+          <a href="https://wa.me/6282252590151?text=Halo%20Admin%20Luthfiah" target="_blank"
+            class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold hover:bg-emerald-100 transition-colors">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
             <span>WhatsApp: +62 812-3456-7890</span>
           </a>
-          
-          <p class="text-xs text-brand-muted mt-3">Jam Operasional: Setiap Hari (08.00 - 21.00 WIB)</p>
+
+          <p class="text-[11px] text-brand-muted mt-2">Jam Operasional: Setiap Hari (08.00 - 21.00 WIB)</p>
         </div>
 
       </div>
 
       <!-- Copyright -->
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-muted gap-3">
+      <div class="pt-5 flex flex-col sm:flex-row items-center justify-between text-[11px] text-brand-muted gap-2">
         <p>&copy; 2026 Toko <strong>Luthfiah</strong>. All rights reserved.</p>
         <p class="flex items-center gap-1">
-          Dibuat dengan <i data-lucide="heart" class="w-3.5 h-3.5 fill-brand-accent text-brand-accent inline"></i> untuk pecinta pastel aesthetic.
+          Dibuat dengan <i data-lucide="heart" class="w-3 h-3 fill-brand-accent text-brand-accent inline"></i> untuk
+          pecinta pastel aesthetic.
         </p>
       </div>
     </div>
   </footer>
 
   <!-- ================= SHOPPING CART DRAWER / MODAL ================= -->
-  <div id="cart-drawer-backdrop" class="fixed inset-0 bg-brand-dark/40 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none">
-    
+  <div id="cart-drawer-backdrop"
+    class="fixed inset-0 bg-brand-dark/40 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none">
+
     <!-- Drawer Panel sliding from right -->
-    <div id="cart-drawer" class="fixed right-0 top-0 bottom-0 w-full sm:w-[480px] bg-white shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out">
-      
+    <div id="cart-drawer"
+      class="fixed right-0 top-0 bottom-0 w-full sm:w-[460px] bg-white shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out">
+
       <!-- Drawer Header -->
-      <div class="p-5 border-b border-pink-100 bg-brand-light/50 flex items-center justify-between">
+      <div
+        class="px-4 py-3.5 sm:px-5 sm:py-4 border-b border-pink-100 bg-brand-light/50 flex items-center justify-between shrink-0">
         <div class="flex items-center gap-2.5">
-          <div class="w-9 h-9 rounded-xl bg-white text-brand-accent flex items-center justify-center shadow-sm">
-            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          <div
+            class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white text-brand-accent flex items-center justify-center shadow-sm">
+            <i data-lucide="shopping-bag" class="w-4 h-4 sm:w-5 sm:h-5"></i>
           </div>
           <div>
-            <h3 class="font-bold text-base text-brand-dark">Keranjang Belanja</h3>
-            <p class="text-xs text-brand-muted"><span id="cart-item-count-label">0</span> item dipilih</p>
+            <h3 class="font-bold text-sm sm:text-base text-brand-dark">Keranjang Belanja</h3>
+            <p class="text-[10px] sm:text-xs text-brand-muted"><span id="cart-item-count-label">0</span> item dipilih
+            </p>
           </div>
         </div>
-        
-        <button id="close-cart-btn" aria-label="Tutup Keranjang" class="w-9 h-9 rounded-full bg-white hover:bg-pink-100 text-brand-muted hover:text-brand-accent flex items-center justify-center transition-colors shadow-sm">
-          <i data-lucide="x" class="w-5 h-5"></i>
+
+        <button id="close-cart-btn" aria-label="Tutup Keranjang"
+          class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white hover:bg-pink-100 text-brand-muted hover:text-brand-accent flex items-center justify-center transition-colors shadow-sm">
+          <i data-lucide="x" class="w-4 h-4 sm:w-5 sm:h-5"></i>
         </button>
       </div>
 
-      <!-- Drawer Body: Cart Items List -->
-      <div id="cart-items-container" class="flex-grow overflow-y-auto p-5 space-y-4">
-        <!-- Rendered dynamically via app.js -->
+      <!-- Scrollable Drawer Body (Items + Form Pembeli) -->
+      <div id="cart-scroll-area"
+        class="flex-grow overflow-y-auto overscroll-contain px-4 py-4 sm:px-5 sm:py-5 space-y-4">
+
+        <!-- Cart Items List Container -->
+        <div id="cart-items-container" class="space-y-2.5">
+          <!-- Rendered dynamically via app.js -->
+        </div>
+
+        <!-- Form Data Pembeli (inside scroll area so mobile keyboard doesn't break layout) -->
+        <div id="cart-buyer-form-section" class="pt-2">
+          <div class="bg-brand-bg/80 p-3.5 sm:p-4 rounded-2xl border border-pink-100 space-y-2.5">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-brand-accent flex items-center gap-1.5">
+              <i data-lucide="user" class="w-3.5 h-3.5"></i>
+              <span>Data Pengiriman Pembeli</span>
+            </h4>
+
+            <div>
+              <label for="buyer-name" class="block text-[11px] font-semibold text-brand-dark mb-1">
+                Nama Lengkap <span class="text-brand-accent">*</span>
+              </label>
+              <input type="text" id="buyer-name" placeholder="Contoh: Sarah Luthfiah"
+                class="w-full px-3 py-2 rounded-xl border border-pink-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:border-brand-accent bg-white transition-all"
+                required>
+            </div>
+
+            <div>
+              <label for="buyer-address" class="block text-[11px] font-semibold text-brand-dark mb-1">
+                Alamat Lengkap Pengiriman <span class="text-brand-accent">*</span>
+              </label>
+              <textarea id="buyer-address" rows="2" placeholder="Jalan, No. Rumah, RT/RW, Kota, Kode Pos"
+                class="w-full px-3 py-2 rounded-xl border border-pink-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:border-brand-accent bg-white resize-none transition-all"
+                required></textarea>
+            </div>
+
+            <div>
+              <label for="buyer-notes" class="block text-[11px] font-semibold text-brand-dark mb-1">
+                Catatan Khusus (Opsional)
+              </label>
+              <input type="text" id="buyer-notes" placeholder="Misal: Warna tutup pink, bubble wrap tebal"
+                class="w-full px-3 py-2 rounded-xl border border-pink-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:border-brand-accent bg-white transition-all">
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Empty Cart Message -->
       <div id="cart-empty-message" class="hidden flex-grow flex flex-col items-center justify-center p-6 text-center">
-        <div class="w-20 h-20 rounded-full bg-brand-light flex items-center justify-center text-brand-accent mb-4">
-          <i data-lucide="shopping-cart" class="w-10 h-10 stroke-[1.5]"></i>
+        <div
+          class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-brand-light flex items-center justify-center text-brand-accent mb-3 sm:mb-4">
+          <i data-lucide="shopping-cart" class="w-8 h-8 sm:w-10 sm:h-10 stroke-[1.5]"></i>
         </div>
-        <h4 class="font-bold text-base text-brand-dark mb-1">Keranjang Masih Kosong</h4>
-        <p class="text-xs text-brand-muted max-w-xs mb-6">
-          Yuk, pilih botol minum atau thermos favoritmu dari katalog dan tambahkan ke sini!
+        <h4 class="font-bold text-sm sm:text-base text-brand-dark mb-1">Keranjang Masih Kosong</h4>
+        <p class="text-xs text-brand-muted max-w-xs mb-5 leading-relaxed">
+          Pilih botol minum atau thermos favoritmu dari katalog dan tambahkan ke sini ya!
         </p>
-        <button id="start-shopping-btn" class="px-6 py-2.5 rounded-full bg-brand-accent text-white text-xs font-semibold shadow-soft hover:bg-brand-hover transition-colors">
+        <button id="start-shopping-btn"
+          class="px-5 py-2.5 rounded-full bg-brand-accent text-white text-xs font-semibold shadow-soft hover:bg-brand-hover transition-colors">
           Mulai Belanja Sekarang
         </button>
       </div>
 
-      <!-- Drawer Footer: Buyer Form & WhatsApp Checkout -->
-      <div id="cart-checkout-section" class="border-t border-pink-100 p-5 bg-brand-bg/60 space-y-4">
-        
+      <!-- Drawer Fixed Footer: Subtotal & Checkout Button -->
+      <div id="cart-checkout-section" class="border-t border-pink-100 p-4 sm:p-5 bg-white shadow-lg shrink-0 space-y-3">
+
         <!-- Total Price Summary -->
-        <div class="bg-white p-3.5 rounded-2xl border border-pink-100 space-y-1.5 shadow-sm">
-          <div class="flex justify-between text-xs text-brand-muted">
-            <span>Subtotal Produk</span>
-            <span id="cart-subtotal-price" class="font-semibold text-brand-dark">Rp 0</span>
-          </div>
-          <div class="flex justify-between text-xs text-brand-muted">
-            <span>Estimasi Ongkir</span>
-            <span class="text-emerald-600 font-semibold text-[11px]">Dihitung oleh Admin</span>
-          </div>
-          <div class="border-t border-pink-100 pt-2 flex justify-between items-center text-sm font-bold text-brand-dark">
-            <span>Total Tagihan:</span>
-            <span id="cart-total-price" class="text-lg text-brand-accent font-extrabold">Rp 0</span>
-          </div>
-        </div>
-
-        <!-- Form Data Pembeli -->
-        <div class="space-y-3 bg-white p-4 rounded-2xl border border-pink-100 shadow-sm">
-          <h4 class="text-xs font-bold uppercase tracking-wider text-brand-accent flex items-center gap-1.5">
-            <i data-lucide="user" class="w-3.5 h-3.5"></i>
-            <span>Data Pengiriman Pembeli</span>
-          </h4>
-
+        <div class="flex items-center justify-between">
           <div>
-            <label for="buyer-name" class="block text-[11px] font-semibold text-brand-dark mb-1">
-              Nama Lengkap <span class="text-brand-accent">*</span>
-            </label>
-            <input 
-              type="text" 
-              id="buyer-name" 
-              placeholder="Contoh: Sarah Luthfiah" 
-              class="w-full px-3.5 py-2 rounded-xl border border-pink-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:border-brand-accent bg-brand-bg/30"
-              required
-            >
+            <span class="text-[10px] sm:text-xs text-brand-muted block">Total Tagihan:</span>
+            <span id="cart-total-price" class="text-base sm:text-lg text-brand-accent font-extrabold leading-tight">Rp
+              0</span>
           </div>
-
-          <div>
-            <label for="buyer-address" class="block text-[11px] font-semibold text-brand-dark mb-1">
-              Alamat Lengkap Pengiriman <span class="text-brand-accent">*</span>
-            </label>
-            <textarea 
-              id="buyer-address" 
-              rows="2" 
-              placeholder="Jalan, No. Rumah, RT/RW, Kelurahan, Kecamatan, Kota, Kode Pos" 
-              class="w-full px-3.5 py-2 rounded-xl border border-pink-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:border-brand-accent bg-brand-bg/30 resize-none"
-              required
-            ></textarea>
-          </div>
-
-          <div>
-            <label for="buyer-notes" class="block text-[11px] font-semibold text-brand-dark mb-1">
-              Catatan Khusus (Opsional)
-            </label>
-            <input 
-              type="text" 
-              id="buyer-notes" 
-              placeholder="Misal: Mohon bubble wrap ekstra, warna pink muda" 
-              class="w-full px-3.5 py-2 rounded-xl border border-pink-200 text-xs focus:outline-none focus:ring-2 focus:ring-brand-accent/40 focus:border-brand-accent bg-brand-bg/30"
-            >
-          </div>
+          <span
+            class="text-[10px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md font-medium border border-emerald-100">
+            ✓ Ongkir dihitung admin
+          </span>
         </div>
 
         <!-- Checkout Button -->
-        <button 
-          id="checkout-wa-btn" 
-          class="w-full flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold text-sm shadow-md transition-all duration-200"
-        >
-          <i data-lucide="message-circle" class="w-5 h-5"></i>
-          <span>Pesan via WhatsApp Sekarang</span>
+        <button id="checkout-wa-btn"
+          class="w-full flex items-center justify-center gap-2 py-3 sm:py-3.5 px-4 rounded-xl sm:rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] text-white font-bold text-xs sm:text-sm shadow-md transition-all duration-200">
+          <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+          <span>Pesan via WhatsApp</span>
         </button>
 
       </div>
@@ -559,10 +627,33 @@
     </div>
   </div>
 
+  <!-- ================= FLOATING BOTTOM CART BAR (Mobile Only) ================= -->
+  <div id="mobile-floating-cart"
+    class="sm:hidden fixed bottom-3 left-3 right-3 z-30 transform translate-y-24 opacity-0 pointer-events-none transition-all duration-300">
+    <div
+      class="bg-brand-dark/95 backdrop-blur-md text-white px-4 py-2.5 rounded-2xl shadow-2xl border border-pink-200/20 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-xl bg-brand-accent flex items-center justify-center text-white">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <p class="text-[11px] font-bold leading-tight"><span id="mobile-cart-count">0</span> Item Dipilih</p>
+          <p id="mobile-cart-total" class="text-xs text-brand-medium font-bold leading-tight">Rp 0</p>
+        </div>
+      </div>
+      <button onclick="openCart()"
+        class="px-3 py-1.5 rounded-xl bg-brand-accent hover:bg-brand-hover text-white text-xs font-bold shadow-sm transition-colors flex items-center gap-1">
+        <span>Buka</span>
+        <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+      </button>
+    </div>
+  </div>
+
   <!-- ================= FLOATING TOAST NOTIFICATION ================= -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-white border border-pink-200 text-brand-dark shadow-xl text-sm font-medium">
-    <div class="w-7 h-7 rounded-full bg-pink-100 text-brand-accent flex items-center justify-center shrink-0">
-      <i data-lucide="check" class="w-4 h-4 stroke-[3]"></i>
+  <div id="toast"
+    class="fixed top-4 right-4 sm:bottom-6 sm:top-auto sm:right-6 z-50 transform -translate-y-12 sm:translate-y-24 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-white border border-pink-200 text-brand-dark shadow-xl text-xs sm:text-sm font-medium">
+    <div class="w-6 h-6 rounded-full bg-pink-100 text-brand-accent flex items-center justify-center shrink-0">
+      <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
     </div>
     <span id="toast-message">Item berhasil ditambahkan!</span>
   </div>
@@ -570,4 +661,5 @@
   <!-- Main JavaScript Logic -->
   <script src="app.js"></script>
 </body>
+
 </html>

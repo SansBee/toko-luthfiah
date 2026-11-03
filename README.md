@@ -48,7 +48,7 @@ Toko Luthfiah/
    - Input Nama Lengkap (wajib), Alamat Pengiriman (wajib), dan Catatan Khusus (opsional).
    - Tombol *"Pesan via WhatsApp"* dengan validasi input.
    - Otomatis merangkai teks pesanan berformat rapi (Detail pesanan, kuantitas, subtotal, total harga, dan data penerima).
-   - Membuka tautan resmi `https://wa.me/6281234567890` menggunakan `encodeURIComponent`.
+   - Membuka tautan resmi `https://wa.me/6282252590151` menggunakan `encodeURIComponent`.
 
 ---
 
